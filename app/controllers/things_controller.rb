@@ -2,6 +2,10 @@ class ThingsController < ApplicationController
     def new
     end
 
+    def index
+        @things = Thing.all
+    end
+
     def create
         @thing = Thing.new(thing_params)
  

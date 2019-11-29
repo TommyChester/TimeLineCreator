@@ -1,0 +1,18 @@
+
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>What it is</th>
+    <th>About</th>
+    <th></th>
+  </tr>
+ 
+  <% @things.each do |thing| %>
+    <tr>
+      <td><%= thing.what_is_it %></td>
+      <td><%= thing.about %></td>
+      <td><%= link_to 'Show', thing_path(thing) %></td>
+    </tr>
+  <% end %>
+</table>
