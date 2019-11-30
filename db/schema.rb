@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191127182617) do
+ActiveRecord::Schema.define(version: 20191130141105) do
+
+  create_table "relative_time_spaces", force: :cascade do |t|
+    t.string "epoch"
+    t.bigint "epochtime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "things", force: :cascade do |t|
     t.string "what_is_it"
