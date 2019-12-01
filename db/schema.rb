@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191130141105) do
+ActiveRecord::Schema.define(version: 20191201150305) do
+
+  create_table "events", force: :cascade do |t|
+    t.integer "people_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.index ["people_id"], name: "index_events_on_people_id"
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "relative_time_spaces", force: :cascade do |t|
     t.string "epoch"
