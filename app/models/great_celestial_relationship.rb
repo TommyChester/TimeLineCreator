@@ -1,0 +1,2 @@
+class GreatCelestialRelationship < ApplicationRecord
+end

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supercluster: MyString
+  cluster: MyString
+  galaxy: MyString
+  arm: MyString
+  distance_from_end_star_log: 1.5
+  distance_from_glactic_core_log: 1.5
+  angle_north_south_rad: 1.5
+  angle_east_west: 1.5
+
+two:
+  supercluster: MyString
+  cluster: MyString
+  galaxy: MyString
+  arm: MyString
+  distance_from_end_star_log: 1.5
+  distance_from_glactic_core_log: 1.5
+  angle_north_south_rad: 1.5
+  angle_east_west: 1.5

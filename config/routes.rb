@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :great_celestial_relationships
   resources :celestial_bodies
   resources :events
   resources :people

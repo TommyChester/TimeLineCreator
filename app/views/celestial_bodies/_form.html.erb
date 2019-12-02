@@ -13,16 +13,17 @@
 
   <div class="field">
     <%= form.label :type %>
+    <p>Undefined, Black Holes, Neutron Star, Star, Gas Giant, Planet, Commet, Asteriod</p>
     <%= form.text_field :type, id: :celestial_body_type %>
   </div>
 
   <div class="field">
-    <%= form.label :volume %>
+    <%= form.label :volume %> m^3
     <%= form.text_field :volume, id: :celestial_body_volume %>
   </div>
 
   <div class="field">
-    <%= form.label :mass %>
+    <%= form.label :mass %> kg
     <%= form.text_field :mass, id: :celestial_body_mass %>
   </div>
 

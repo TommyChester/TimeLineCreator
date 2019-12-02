@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Great Celestial Relationships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Supercluster</th>
+      <th>Cluster</th>
+      <th>Galaxy</th>
+      <th>Arm</th>
+      <th>Distance from end star log</th>
+      <th>Distance from glactic core log</th>
+      <th>Angle north south rad</th>
+      <th>Angle east west</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @great_celestial_relationships.each do |great_celestial_relationship| %>
+      <tr>
+        <td><%= great_celestial_relationship.supercluster %></td>
+        <td><%= great_celestial_relationship.cluster %></td>
+        <td><%= great_celestial_relationship.galaxy %></td>
+        <td><%= great_celestial_relationship.arm %></td>
+        <td><%= great_celestial_relationship.distance_from_end_star_log %></td>
+        <td><%= great_celestial_relationship.distance_from_glactic_core_log %></td>
+        <td><%= great_celestial_relationship.angle_north_south_rad %></td>
+        <td><%= great_celestial_relationship.angle_east_west %></td>
+        <td><%= link_to 'Show', great_celestial_relationship %></td>
+        <td><%= link_to 'Edit', edit_great_celestial_relationship_path(great_celestial_relationship) %></td>
+        <td><%= link_to 'Destroy', great_celestial_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Great Celestial Relationship', new_great_celestial_relationship_path %>

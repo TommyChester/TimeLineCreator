@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Supercluster:</strong>
+  <%= @great_celestial_relationship.supercluster %>
+</p>
+
+<p>
+  <strong>Cluster:</strong>
+  <%= @great_celestial_relationship.cluster %>
+</p>
+
+<p>
+  <strong>Galaxy:</strong>
+  <%= @great_celestial_relationship.galaxy %>
+</p>
+
+<p>
+  <strong>Arm:</strong>
+  <%= @great_celestial_relationship.arm %>
+</p>
+
+<p>
+  <strong>Distance from end star log:</strong>
+  <%= @great_celestial_relationship.distance_from_end_star_log %>
+</p>
+
+<p>
+  <strong>Distance from glactic core log:</strong>
+  <%= @great_celestial_relationship.distance_from_glactic_core_log %>
+</p>
+
+<p>
+  <strong>Angle north south rad:</strong>
+  <%= @great_celestial_relationship.angle_north_south_rad %>
+</p>
+
+<p>
+  <strong>Angle east west:</strong>
+  <%= @great_celestial_relationship.angle_east_west %>
+</p>
+
+<%= link_to 'Edit', edit_great_celestial_relationship_path(@great_celestial_relationship) %> |
+<%= link_to 'Back', great_celestial_relationships_path %>

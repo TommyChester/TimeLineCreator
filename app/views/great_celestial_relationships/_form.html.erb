@@ -1,0 +1,57 @@
+<%= form_with(model: great_celestial_relationship, local: true) do |form| %>
+  <% if great_celestial_relationship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(great_celestial_relationship.errors.count, "error") %> prohibited this great_celestial_relationship from being saved:</h2>
+
+      <ul>
+      <% great_celestial_relationship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :supercluster %>
+    <%= form.text_field :supercluster, id: :great_celestial_relationship_supercluster %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cluster %>
+    <%= form.text_field :cluster, id: :great_celestial_relationship_cluster %>
+  </div>
+
+  <div class="field">
+    <%= form.label :galaxy %>
+    <%= form.text_field :galaxy, id: :great_celestial_relationship_galaxy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :arm %>
+    <%= form.text_field :arm, id: :great_celestial_relationship_arm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance_from_end_star_log %>
+    <%= form.text_field :distance_from_end_star_log, id: :great_celestial_relationship_distance_from_end_star_log %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance_from_glactic_core_log %>
+    <%= form.text_field :distance_from_glactic_core_log, id: :great_celestial_relationship_distance_from_glactic_core_log %>
+  </div>
+
+  <div class="field">
+    <%= form.label :angle_north_south_rad %>
+    <%= form.text_field :angle_north_south_rad, id: :great_celestial_relationship_angle_north_south_rad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :angle_east_west %>
+    <%= form.text_field :angle_east_west, id: :great_celestial_relationship_angle_east_west %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
