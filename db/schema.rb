@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191201153155) do
+ActiveRecord::Schema.define(version: 20191202145700) do
+
+  create_table "celestial_bodies", force: :cascade do |t|
+    t.string "type"
+    t.float "volume"
+    t.float "mass"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.integer "people_id"
