@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @celestial_body.type %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @celestial_body.volume %>
+</p>
+
+<p>
+  <strong>Mass:</strong>
+  <%= @celestial_body.mass %>
+</p>
+
+<%= link_to 'Edit', edit_celestial_body_path(@celestial_body) %> |
+<%= link_to 'Back', celestial_bodies_path %>

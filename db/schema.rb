@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191201150305) do
+ActiveRecord::Schema.define(version: 20191201153155) do
 
   create_table "events", force: :cascade do |t|
     t.integer "people_id"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20191201150305) do
     t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "decendancy"
+    t.string "body_form"
+    t.string "mind_form"
   end
 
   create_table "relative_time_spaces", force: :cascade do |t|
@@ -32,6 +35,7 @@ ActiveRecord::Schema.define(version: 20191201150305) do
     t.bigint "epochtime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "physicality"
   end
 
   create_table "things", force: :cascade do |t|

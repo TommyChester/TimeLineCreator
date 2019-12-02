@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :celestial_bodies
   resources :events
   resources :people
   resources :relative_time_spaces

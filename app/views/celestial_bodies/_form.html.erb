@@ -1,0 +1,32 @@
+<%= form_with(model: celestial_body, local: true) do |form| %>
+  <% if celestial_body.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(celestial_body.errors.count, "error") %> prohibited this celestial_body from being saved:</h2>
+
+      <ul>
+      <% celestial_body.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :celestial_body_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volume %>
+    <%= form.text_field :volume, id: :celestial_body_volume %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mass %>
+    <%= form.text_field :mass, id: :celestial_body_mass %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
