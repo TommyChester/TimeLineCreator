@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191202145700) do
+ActiveRecord::Schema.define(version: 20191203014740) do
 
   create_table "celestial_bodies", force: :cascade do |t|
     t.string "type"
@@ -20,23 +20,24 @@ ActiveRecord::Schema.define(version: 20191202145700) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "events", force: :cascade do |t|
-    t.integer "people_id"
+# Could not dump table "events" because of following StandardError
+#   Unknown type 'has_many' for column 'people'
+
+  create_table "great_celestial_relationships", force: :cascade do |t|
+    t.string "supercluster"
+    t.string "cluster"
+    t.string "galaxy"
+    t.string "arm"
+    t.float "distance_from_end_star_log"
+    t.float "distance_from_glactic_core_log"
+    t.float "angle_north_south_rad"
+    t.float "angle_east_west"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "description"
-    t.index ["people_id"], name: "index_events_on_people_id"
   end
 
-  create_table "people", force: :cascade do |t|
-    t.string "name"
-    t.text "bio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "decendancy"
-    t.string "body_form"
-    t.string "mind_form"
-  end
+# Could not dump table "people" because of following StandardError
+#   Unknown type 'has_many' for column 'event'
 
   create_table "relative_time_spaces", force: :cascade do |t|
     t.string "epoch"
