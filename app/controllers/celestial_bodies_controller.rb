@@ -69,6 +69,6 @@ class CelestialBodiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def celestial_body_params
-      params.require(:celestial_body).permit(:type, :volume, :mass)
+      params.require(:celestial_body).permit(:body_type, :volume, :mass)
     end
 end

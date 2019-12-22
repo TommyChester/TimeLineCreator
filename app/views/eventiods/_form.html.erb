@@ -1,0 +1,27 @@
+<%= form_with(model: eventiod, local: true) do |form| %>
+  <% if eventiod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eventiod.errors.count, "error") %> prohibited this eventiod from being saved:</h2>
+
+      <ul>
+      <% eventiod.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :eventiod_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :eventiod_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

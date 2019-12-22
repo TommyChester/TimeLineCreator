@@ -1,0 +1,2 @@
+class Eventiod < ApplicationRecord
+end

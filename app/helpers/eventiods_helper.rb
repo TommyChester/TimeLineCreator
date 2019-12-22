@@ -1,0 +1,2 @@
+module EventiodsHelper
+end

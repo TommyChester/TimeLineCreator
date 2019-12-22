@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @eventiod.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @eventiod.description %>
+</p>
+
+<p>
+  <strong>Long descrip:</strong>
+  <%= @eventiod.long_descrip %>
+</p>
+
+<%= link_to 'Edit', edit_eventiod_path(@eventiod) %> |
+<%= link_to 'Back', eventiods_path %>

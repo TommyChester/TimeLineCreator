@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191203014740) do
+ActiveRecord::Schema.define(version: 20191222200653) do
 
   create_table "celestial_bodies", force: :cascade do |t|
     t.string "type"
     t.float "volume"
     t.float "mass"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "body_type"
+  end
+
+  create_table "eventiods", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.text "long_descrip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

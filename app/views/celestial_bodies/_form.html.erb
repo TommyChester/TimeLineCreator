@@ -12,9 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :type %>
-    <p>Undefined, Black Holes, Neutron Star, Star, Gas Giant, Planet, Commet, Asteriod</p>
-    <%= form.text_field :type, id: :celestial_body_type %>
+    <%= form.label :body_type %>
+    <%= form.select :body_type, ["Undefined", "Black Holes", "Neutron Star", "Star", "Gas Giant", "Planet", "Commet", "Asteriod"]%>
   </div>
 
   <div class="field">
